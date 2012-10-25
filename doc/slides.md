@@ -16,11 +16,42 @@ October 25th, 2012
 !SLIDE bullets
 # mocha/should #
 
-* async tests with many reporters
+* async tests with many built-in reporters
 * factory for creating common objects in mongo
 * integration tests actually spin up a server in process
 * npm test is your friend
 * drop the whole database before running tests
+
+!SLIDE code small
+	@@@ javascript
+	require('../lib/array');
+
+	describe('Array', function() {
+	  describe('#sortInsensitive', function() {
+	    it('handles a zero length array', function() {
+	      [].sortInsensitive().should.eql([]);
+	    });
+
+	    it('is non-iterable', function() {
+	      for (var key in ['a', 'b']) {
+	        key.should.not.equal('sortInsensitive');
+	      }
+	    });
+
+	    it('is case insensitive', function() {
+	      ['AC', 'Aa', 'B', 'a'].sortInsensitive()
+	        .should.eql(['a', 'Aa', 'AC', 'B']);
+	    });
+
+	    it('handles attributes', function() {
+	      var a = { title: 'foo' };
+	      var b = { title: 'bar' };
+	      var c = { title: 'CAT' };
+	      [a, b, c].sortInsensitive('title')
+	        .should.eql([b, c, a]);
+	    });
+	  });
+	});
 
 !SLIDE bullets
 # Teamcity #
@@ -31,7 +62,7 @@ October 25th, 2012
 * branches dev for development, master for production
 * push button deploy to production servers
 
-!SLIDE center
+!SLIDE full-page
 
 ![Teamcity](/file/doc/teamcity.png)
 
