@@ -57,12 +57,12 @@ October 25th, 2012
 # Teamcity #
 
 * mongo/redis instances for test and acceptance
-* teamcity reporter from mocha - metrics
+* teamcity reporter from mocha - success/failure count
 * automatic pulls from github, runs tests
 * branches dev for development, master for production
 * push button deploy to production servers
 
-!SLIDE full-page
+!SLIDE center
 
 ![Teamcity](/file/doc/teamcity.png)
 
