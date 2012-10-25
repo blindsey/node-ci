@@ -1,0 +1,6 @@
+{
+  "name" : "CI for node.js",
+  "sections" : [ {
+    "section" : "doc"
+  }]
+}
