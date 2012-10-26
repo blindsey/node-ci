@@ -101,6 +101,8 @@ October 25th, 2012
 * autoscaling with EC2 cloud watch
 
 !SLIDE bullets
+# More info #
+
 * [http://www.jetbrains.com/teamcity/](http://www.jetbrains.com/teamcity/)
 * [http://www.opscode.com/chef/](http://www.opscode.com/chef/)
 * [ben.lindsey@vungle.com](mailto:ben.lindsey@vungle.com)
